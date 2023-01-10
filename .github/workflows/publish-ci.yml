@@ -13,6 +13,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
        - name: Build the hello-docker Docker ci image
          run: |
-           docker build -f /Dockerfile.ci --tag ghcr.io/yominame/hello-docker-gcr-demo-ci:latest
+           docker build -f . --tag ghcr.io/yominame/hello-docker-gcr-demo-ci:latest
            docker run ghcr.io/yominame/hello-docker-gcr-demo-ci:latest
            docker push ghcr.io/yominame/hello-docker-gcr-demo-ci:latest
